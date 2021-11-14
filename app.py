@@ -1,19 +1,19 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
+import os
 
 app = Flask(__name__)
 
-@app.route('/favicon.io')
-def favicon():
-    app.send_static_file('favicon.ico')
-
 @app.route('/')
-def index():
+def main():
     return render_template('main.html')
 
-@app.route('/correct')
+@app.route('/youareabigwinner')
 def correct():
     return render_template("correct.html")
 
+@app.route('/aboutthisamazingproject')
+def aboutthisamazingproject():
+    return render_template('about.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
