@@ -3,17 +3,37 @@
     <head>
         <meta charset="utf-8">
         <link rel="icon" href="favicon.ico">
+        
         <title>Guess the art!</title> 
     </head>
     <body>
 
         {% extends "template.html" %}
         {% block content %}
-        
-        <h1>
-            Guess the art - homepage
-        </h1>
+        <main>
+        <div class="maint"><h1>
+            Let's generate !
+        </h1></div>
+
+        <div class="container">
+            <div onclick="abstract()">
+                ABSTRACT ART
+            </div>
+            <div onclick="imp()">
+                IMPRESSIONIST LANDSCAPE
+            </div>
+            <div onclick="clouds()">
+                CLOUDS
+            </div>
+            <div onclick="piz()">
+                (PIZZAS)
+            </div>
+        </div>
+        <script src="../static/script.js"> </script>
+        <div id="floating">Click something again!</div>
+        <img src="" id="mainimg">
         {% endblock %}
+    </main>
     </body>
 
 </html>
