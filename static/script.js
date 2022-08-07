@@ -1,11 +1,15 @@
 function abstract() {
-    img = document.getElementById("mainimg")
-    img.src ="https://www.w3schools.com/js/pic_bulboff.gif"
+    img = document.getElementById("mainimg");
+    nombre = Math.floor(Math.random() * 22);
+    img.src =`../static/images/abs${nombre}.png`;
+    image(img)
   }
 
 function imp() {
-    img = document.getElementById("mainimg")
-    img.src ="https://www.w3schools.com/js/pic_bulboff.gif"
+    img = document.getElementById("mainimg");
+    nombre = Math.floor(Math.random() * 25);
+    img.src =`../static/images/imp${nombre}.png`;
+    image(img)
   }
 
 function clouds() {
@@ -17,7 +21,7 @@ function clouds() {
 
 function piz() {
     img = document.getElementById("mainimg")
-    nombre = Math.floor(Math.random() * 10);
+    nombre = Math.floor(Math.random() * 20);
     img.src =`../static/images/pizza${nombre}.png`;
     image(img) 
   }
